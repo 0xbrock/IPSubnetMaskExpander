@@ -2,8 +2,8 @@
 
 <div class="row">
     <div class="col-sm-4">
-        <h4>IP Subnet Masks</h4>
-        <textarea rows="8" cols="17" ng-model="vm.subnetmasks">
+        <h4><label for="subnetmasks">IP Subnet Masks</label></h4>
+        <textarea id="subnetmasks" rows="8" cols="17" ng-model="vm.subnetmasks">
 23.96.0.0/18
 23.96.64.0/28
         </textarea>
@@ -13,12 +13,12 @@
     </div>
     <div class="col-sm-8">
         <div class="row" ng-show="vm.ranges && vm.ranges.length > 0">
-            <h4>Download Results</h4>
+            <h4><label>Download Results</label></h4>
             <a href="#" class="btn btn-lg btn-default" ng-click="vm.downloadIPRanges()">Ranges</a>
             <a href="#" class="btn btn-lg btn-default" ng-click="vm.downloadExpandedIPRanges()">Expanded Ranges</a>
         </div>
         <div class="row" ng-show="vm.ranges && vm.ranges.length > 0">
-            <h4>Results</h4>
+            <h4><label>Results</label></h4>
         </div>
         <div class="row" ng-show="vm.ranges && vm.ranges.length > 0">
             <div class="col-sm-4">IP Subnet Mask</div>
