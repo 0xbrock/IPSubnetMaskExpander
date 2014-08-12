@@ -15,16 +15,19 @@
             var resolved = resolveRanges(ips);
             vm.ranges = resolved.ranges;
             vm.expanded = resolved.expanded;
+            if (ga) ga('send', 'event', 'button', 'click', 'calculate');
         };
         vm.downloadIPRanges = function() {
             SaveFileService.Save(
                 vm.csv(vm.ranges, ['\"IP Range Subnet Mask\", \"First IP\", \"Last IP\"']),
                 "ipranges.csv", "text/csv");
+            if (ga) ga('send', 'event', 'button', 'click', 'downloadIPRanges');
         };
         vm.downloadExpandedIPRanges = function() {
             SaveFileService.Save(
                 vm.csv(vm.expanded, ['\"Expanded\"']),
                 "expandedIPRange.csv", "text/csv");
+            if (ga) ga('send', 'event', 'button', 'click', 'downloadExpandedIPRanges');
         };
         vm.csv = function(data, header) {
             return header.concat(data);
