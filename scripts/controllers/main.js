@@ -20,13 +20,13 @@
         vm.downloadIPRanges = function() {
             SaveFileService.Save(
                 vm.csv(vm.ranges, ['\"IP Range Subnet Mask\", \"First IP\", \"Last IP\"']),
-                "ipranges.csv", "text/csv");
+                'ipranges.csv', 'text/csv;charset=utf-8');
             if (ga) ga('send', 'event', 'button', 'click', 'downloadIPRanges');
         };
         vm.downloadExpandedIPRanges = function() {
             SaveFileService.Save(
                 vm.csv(vm.expanded, ['\"Expanded\"']),
-                "expandedIPRange.csv", "text/csv");
+                'expandedIPRange.csv', 'text/csv;charset=utf-8');
             if (ga) ga('send', 'event', 'button', 'click', 'downloadExpandedIPRanges');
         };
         vm.csv = function(data, header) {
