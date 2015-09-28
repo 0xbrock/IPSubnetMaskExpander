@@ -19,7 +19,7 @@ angular.module('0xbrock.Ipsubnetmaskexpander', ['ngRoute'])
   }).service('SaveFileService', [function () {
         this.Save = function(data, filename, mimeType) {
             var blob = new Blob([data.join('\n')], {type: mimeType});
-            if (/\bMSIE\b|\bTrident\b/.test(navigator.userAgent)) {
+            if (/\bMSIE\b|\bTrident\b|\bEdge\b/.test(navigator.userAgent)) {
                 window.navigator.msSaveOrOpenBlob(blob, filename);
             } else {
                 var url  = window.URL || window.webkitURL,
