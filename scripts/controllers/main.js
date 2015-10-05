@@ -11,7 +11,8 @@
         vm.expanded = [];
         vm.calculate = function() {
             // Create the list and remove the empty items
-            var ips = vm.cleanArray(vm.subnetmasks.split(/\r?\n/), "");
+            var reIP = /\b\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}\/\d{1,3}\b/g;
+            var ips = vm.cleanArray(vm.subnetmasks.match(reIP), "");
             var resolved = resolveRanges(ips);
             vm.ranges = resolved.ranges;
             vm.expanded = resolved.expanded;
