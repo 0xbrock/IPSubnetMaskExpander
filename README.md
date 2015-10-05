@@ -10,7 +10,8 @@ It wraps the excellent [Network and IP address calculator](http://www.tuxgraphic
 ## Usage
 
 Enter the subnet masks in the text area.  The subnet masks are found by format.
-One per line
+
+One per line:
 ```text
 23.96.0.0/18
 23.96.64.0/28
