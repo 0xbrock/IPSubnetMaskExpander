@@ -9,12 +9,30 @@ It wraps the excellent [Network and IP address calculator](http://www.tuxgraphic
 
 ## Usage
 
-Enter each subnet mask on a new line in the text area:
-
+Enter the subnet masks in the text area.  The subnet masks are found by format.
+One per line
 ```text
 23.96.0.0/18
 23.96.64.0/28
 23.96.64.64/26
+...
+```
+
+Intermixed with XML or commas:
+```text
+23.96.0.0/18, 23.96.64.0/28
+<iprange Subnet="23.96.64.64/26" />
+<iprange Subnet="23.96.64.128/27" />
+...
+```
+
+OR a combination:
+```text
+23.96.0.0/18, 23.96.64.0/28
+<iprange Subnet="23.96.64.64/26" />
+<iprange Subnet="23.96.64.128/27" />
+23.96.64.160/28
+23.96.80.0/20
 ...
 ```
 
